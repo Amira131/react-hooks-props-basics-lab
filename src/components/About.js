@@ -1,14 +1,30 @@
 import React from "react";
 
-function About() {
+import Links from "./Links";
+
+
+function About({pAbout}) {
+  console.log(pAbout)
+  
+  // const isBioPassed = p.isBioPassed;
+  // if (isBioPassed) {
+  //   return (
+  //     <>
+  //     {isBioPassed? <p/> : ""}
+      
+  //     </>
+  //   )
+  // }
+  
   return (
     <div id="about">
       <h2>About Me</h2>
-      <p>Put the bio in here</p>
+      {/* <p>{pAbout.bio}</p> */}
       <img src="https://i.imgur.com/mV8PQxj.gif" alt="I made this" />
-      {/* add your <Links /> component here */}
+
+      {<Links pLinks={pAbout.links} />}
     </div>
   );
-}
+  }
 
 export default About;
